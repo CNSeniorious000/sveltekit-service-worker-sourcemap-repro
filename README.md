@@ -4,6 +4,10 @@ Reproduces missing user-source mappings in SvelteKit 3.1.0's service worker env 
 
 ## Reproduce
 
+[Open in StackBlitz](https://stackblitz.com/github/CNSeniorious000/sveltekit-service-worker-sourcemap-repro?file=src%2Fservice-worker.js&startScript=build&view=editor). The build runs automatically; run `npm run verify` in its terminal to check the source location.
+
+The WASM binding and runtime are pinned to avoid the unrelated WebContainer startup failure described in [rolldown/rolldown#11292](https://github.com/rolldown/rolldown/pull/11292).
+
 Use Node.js 24 and Bun 1.4.4:
 
 ```sh
